@@ -15,7 +15,7 @@ impl FromStr for Command
     type Err = ParseIntError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let mut split : Vec<&str> = s.split(" ").collect();
+        let split : Vec<&str> = s.split(" ").collect();
         if split.len() != 2
         {
             panic!("can not parse!! {}", s);
